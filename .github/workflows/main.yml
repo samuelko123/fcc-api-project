@@ -1,0 +1,31 @@
+name: main-workflow
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    
+    # Coverage
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 14.x
+    - name: Install dependencies
+      run: npm install
+    - name: Run test
+      run: npm test
+    - name: Upload report to codecov
+      run: npm run codecov-upload
+            
+    # Deploy
+    - uses: actions/checkout@v2
+    - uses: akhileshns/heroku-deploy@v3.12.12
+      with:
+        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        heroku_app_name: "fcc-api-project-samuelko"
+        heroku_email: "koshunyin@gmail.com"
