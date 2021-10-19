@@ -14,7 +14,7 @@ requestBody:
   content:
     application/json:
       schema:
-        $ref: '../schemas/Exercise.yaml'     
+        $ref: '../schemas/exercise.yaml'     
 responses:
   '201':
     description: An Exercise object
