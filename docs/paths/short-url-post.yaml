@@ -1,0 +1,31 @@
+summary: Creates short URL
+tags:
+  - short-url
+requestBody:
+  required: true
+  description: The URL to be shortened
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          url:
+            type: string
+        example:
+          url: https://google.com
+responses:
+  '201':
+    description: A UrlMapping object
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: '../schemas/mongo-id.yaml'
+            - $ref: '../schemas/url-mapping.yaml'
+  '400':
+    description: An Error object
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/error.yaml'
+  

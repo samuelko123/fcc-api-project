@@ -1,0 +1,9 @@
+type: object
+properties:
+  unix:
+    type: integer
+  utc:
+    type: string
+example:
+  unix: 1577836800000
+  utc: Wed, 01 Jan 2020 00:00:00 GMT

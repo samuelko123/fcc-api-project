@@ -1,0 +1,60 @@
+openapi: 3.0.0
+info:
+  title: FCC API
+  description: This API converts date/unix input into unix/utc output
+  version: 1.0.0
+  contact:
+    name: Samuel Ko
+    email: koshunyin@gmail.com
+servers:
+  - url: https://fcc-api-project-samuelko.herokuapp.com/
+externalDocs:
+  description: GitHub Repository
+  url: https://github.com/samuelko123/timestamp-api
+paths:
+  /timestamp:
+    get:
+      $ref: './paths/timestamp.yaml'
+  /timestamp/{date_string}:
+    get:
+      $ref: './paths/timestamp-date-string.yaml'
+  /client-info:
+    get:
+      $ref: './paths/client-info.yaml'
+  /file-analyse:
+    post:
+      $ref: './paths/file-analyse.yaml'
+  /short-url:
+    post:
+      $ref: './paths/short-url-post.yaml'
+  /short-url/{url_id}:
+    get:
+      $ref: './paths/short-url-get.yaml'
+  /users:
+    post:
+      $ref: './paths/users-post.yaml'
+    get:
+      $ref: './paths/users-get.yaml'
+  /users/{user_id}/exercises:
+    post:
+      $ref: './paths/exercises-post.yaml'
+    get:
+      $ref: './paths/exercises-get.yaml'
+components:
+  schemas:
+    Timestamp:
+      $ref: './schemas/timestamp.yaml'
+    ClientInfo:
+      $ref: './schemas/client-info.yaml'
+    Error:
+      $ref: './schemas/error.yaml'
+    FileMetadata:
+      $ref: './schemas/file-metadata.yaml'
+    UrlMapping:
+      $ref: './schemas/url-mapping.yaml'
+    User:
+      $ref: './schemas/user.yaml'
+    Exercise:
+      $ref: './schemas/exercise.yaml'
+    MongoID:
+      $ref: './schemas/mongo-id.yaml'

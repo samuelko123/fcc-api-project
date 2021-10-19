@@ -1,0 +1,12 @@
+type: object
+properties:
+  description:
+    type: string
+  duration:
+    type: number
+  date:
+    type: string
+example:
+  description: 'swimming'
+  duration: 30
+  date: '2020-01-01'

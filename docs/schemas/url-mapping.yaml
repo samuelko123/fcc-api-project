@@ -1,0 +1,9 @@
+type: object
+properties:
+  original_url:
+    type: string
+  short_url:
+    type: integer
+example:
+  original_url: https://google.com
+  short_url: 1

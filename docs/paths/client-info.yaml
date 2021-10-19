@@ -1,0 +1,10 @@
+summary: Returns client's info
+tags:
+  - client-info
+responses:
+  '200':
+    description: A ClientInfo object
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/client-info.yaml'

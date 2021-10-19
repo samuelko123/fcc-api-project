@@ -1,0 +1,12 @@
+type: object
+properties:
+  name:
+    type: string
+  type:
+    type: string
+  size:
+    type: integer
+example:
+  name: test.png
+  type: image/png
+  size: 2428

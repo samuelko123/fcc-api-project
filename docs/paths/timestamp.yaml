@@ -1,0 +1,16 @@
+summary: Returns timestamp of current time
+tags:
+  - timestamp
+responses:
+  '200':
+    description: A timestamp
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/timestamp.yaml'
+  '500':
+    description: An Error object
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/error.yaml'

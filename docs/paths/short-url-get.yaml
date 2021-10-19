@@ -1,0 +1,25 @@
+summary: Redirects to original URL
+tags:
+  - short-url
+parameters:
+  - name: url_id
+    in: path
+    description: the "url_id" generated from POST endpoint
+    required: true
+    schema:
+      type: string
+    example: 1
+responses:
+  '302':
+    description: Redirects to original URL
+    headers:
+      Location:
+        description: The original URL
+        schema:
+          type: string
+  '404':
+    description: An Error object
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/error.yaml'

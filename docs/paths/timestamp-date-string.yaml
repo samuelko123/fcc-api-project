@@ -1,0 +1,34 @@
+summary: Returns unix and utc of the date_string
+tags:
+  - timestamp
+parameters:
+  - name: date_string
+    in: path
+    description: A date string or unix timestamp
+    required: true
+    schema:
+      type: string
+    examples:
+      date string:
+        value: '2020-01-01'
+      unix timestamp:
+        value: '1577836800000'
+responses:
+  '200':
+    description: A Timestamp object
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/timestamp.yaml'
+  '400':
+    description: An Error object
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/error.yaml'
+  '500':
+    description: An Error object
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/error.yaml'

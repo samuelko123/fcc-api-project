@@ -1,0 +1,20 @@
+summary: Returns all users
+tags:
+  - users
+responses:
+  '200':
+    description: An array of User objects
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            allOf:
+              - $ref: '../schemas/mongo-id.yaml'
+              - $ref: '../schemas/user.yaml'
+  '500':
+    description: An Error object
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/error.yaml'

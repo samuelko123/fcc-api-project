@@ -1,0 +1,34 @@
+summary: Returns a list of Exercise object of User object
+tags:
+  - exercises
+parameters:
+  - name: user_id
+    in: path
+    description: _id of User object
+    required: true
+    schema:
+      type: string
+responses:
+  '200':
+    description: An array of Exercise object
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            _id:
+              type: string
+            username:
+              type: string
+            count:
+              type: integer
+            exercises:
+              type: array
+              items:
+                $ref: '../schemas/exercise.yaml'
+  '400':
+    description: An Error object
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/error.yaml'

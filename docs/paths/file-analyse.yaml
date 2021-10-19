@@ -1,0 +1,33 @@
+summary: Return file's metadata
+tags:
+  - file-analyse
+requestBody:
+  required: true
+  description: The file to be analysed
+  content:
+    multipart/form-data:
+      schema:
+        type: object
+        properties:
+          upfile:
+            type: string
+            format: binary
+responses:
+  '200':
+    description: A FileMetadata object
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/file-metadata.yaml'
+  '400':
+    description: An Error object
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/error.yaml'
+  '500':
+    description: An Error object
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/error.yaml'

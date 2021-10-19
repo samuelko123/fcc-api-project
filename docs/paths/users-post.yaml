@@ -1,0 +1,25 @@
+summary: Creates a user
+tags:
+  - users
+requestBody:
+  required: true
+  description: The username to be created. Accepts any string.
+  content:
+    application/json:
+      schema:
+        $ref: '../schemas/user.yaml'
+responses:
+  '201':
+    description: An User object
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: '../schemas/mongo-id.yaml'
+            - $ref: '../schemas/user.yaml'
+  '400':
+    description: An Error object
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/error.yaml'

@@ -1,0 +1,6 @@
+type: object
+properties:
+  _id:
+    type: string
+example:
+  _id: 616e3e2f5df30eb71e3b78d9

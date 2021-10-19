@@ -1,0 +1,14 @@
+# Environment variable files
+.env
+
+# Dependency directories
+node_modules/
+
+# Build directories
+build/
+
+# Coverage directories
+coverage/
+
+# Generated documentation
+/docs/openapi.json
