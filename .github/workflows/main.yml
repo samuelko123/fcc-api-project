@@ -2,7 +2,7 @@ name: main-workflow
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
