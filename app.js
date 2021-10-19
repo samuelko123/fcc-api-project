@@ -42,7 +42,7 @@ app.use(
     '/docs',
     swaggerUi.serve,
     swaggerUi.setup(null, {
-        customSiteTitle: 'Test API',
+        customSiteTitle: 'FreeCodeCamp API Project',
         swaggerOptions: {
             url: '/docs/openapi.json'
         }

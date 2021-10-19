@@ -1,16 +1,16 @@
 openapi: 3.0.0
 info:
-  title: FCC API
-  description: This API converts date/unix input into unix/utc output
+  title: FreeCodeCamp API Project
+  description: This API combines all my work for FreeCodeCamp Back End Development and APIs certification
   version: 1.0.0
   contact:
     name: Samuel Ko
     email: koshunyin@gmail.com
 servers:
-  - url: https://fcc-api-project-samuelko.herokuapp.com/
+  - url: /api
 externalDocs:
   description: GitHub Repository
-  url: https://github.com/samuelko123/timestamp-api
+  url: https://github.com/samuelko123/fcc-api-project
 paths:
   /timestamp:
     get:
